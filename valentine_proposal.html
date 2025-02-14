@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine?</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffe6e6;
+        }
+        h1 {
+            color: #ff3366;
+        }
+        .message {
+            font-size: 18px;
+            color: #333;
+            margin: 20px;
+            max-width: 500px;
+        }
+        .btn {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .yes {
+            background-color: #ff3366;
+            color: white;
+        }
+        .no {
+            background-color: #666;
+            color: white;
+            position: absolute;
+        }
+        .photo-upload {
+            margin-top: 20px;
+        }
+        .cute-image {
+            width: 200px;
+            margin-top: 20px;
+        }
+        .photo-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .photo-gallery img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Will you be my Valentine, JV & Joanna? 💖</h1>
+    <img src="https://media.giphy.com/media/3o7aCTfyhYawdOXcFW/giphy.gif" alt="Cute animated heart" class="cute-image">
+    <img src="https://media.giphy.com/media/J3bHrQjPqXS7S/giphy.gif" alt="Cute Frenchie gif" class="cute-image">
+    <p class="message">Hi baby! I know that the roommate inside your brain tells you weird things sometimes that make you feel certain things (weird way of saying "I know your overthinking can make you feel certain things"), but I hope you know that you are doing amazing, and I am super proud of you and how far you've come. I know we don't have our dream home yet, and we're still figuring ourselves and this thing called life right now, but I feel at ease knowing that I've figured out who I want to share this life thing with. ❤️ Thank you for being you. I love you and everything that comes with you.</p>
+    
+    <div class="photo-gallery">
+        <img src="your-photo1.jpg" alt="Photo of us">
+        <img src="your-photo2.jpg" alt="Another cute moment">
+        <img src="your-photo3.jpg" alt="Special memory">
+    </div>
+    
+    <button class="btn yes" onclick="sayYes()">Yes</button>
+    <button class="btn no" onmouseover="moveButton()">No</button>
+    
+    <div class="photo-upload">
+        <p>Upload a cute photo of us to make this more special! 📸</p>
+        <input type="file" accept="image/*">
+    </div>
+
+    <script>
+        function sayYes() {
+            document.body.innerHTML = '<h1>Yay! You made my day, Joanna! ❤️</h1>';
+        }
+        
+        function moveButton() {
+            let button = document.querySelector('.no');
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 50);
+            button.style.left = `${x}px`;
+            button.style.top = `${y}px`;
+        }
+    </script>
+</body>
+</html>
